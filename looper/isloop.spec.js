@@ -19,10 +19,12 @@ test2.addToHead('z');
 letters.forEach(letter => test2.addToTail(letter));
 test2.getNthNode(9).next = test2.getNthNode(1);
 
+
 // This LL has no loop!
 const test3 = new LinkedList();
 test3.addToHead('📺');
 emojis.forEach(el => test3.addToTail(el))
+
 
 describe('isLoop function', () => {
 	

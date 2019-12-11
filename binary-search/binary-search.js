@@ -1,8 +1,23 @@
-'use strict';
+"use strict";
 
 // Complete this algo
 const binarySearch = (array, target) => {
-	
+  const left = array.slice(0, array.length / 2);
+  const right = array.slice(array.length / 2);
+
+  if (array.length === 1) {
+    //base case
+
+    return target === array[0]; //returning true or false
+  }
+
+  if (target <= left[left.length - 1]) {
+    return binarySearch(left, target);
+  } else if (target >= right[0]) {
+    return binarySearch(right, target);
+  } else {
+    return false;
+  }
 };
 
 /*
@@ -14,4 +29,4 @@ const binarySearch = (array, target) => {
 
 */
 
-module.exports = binarySearch
+module.exports = binarySearch;
